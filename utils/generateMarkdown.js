@@ -32,6 +32,44 @@ return '';
 function generateMarkdown(data) {
   return `# ${data.title}
 
+  ${renderLicenseBadge(data.license)}
+
+## Description
+
+${data.description}
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+${renderLicenseLink(data.license)}
+- [Questions](#questions)
+
+## Installation
+
+${data.installation}
+
+## Usage
+
+${data.usage}
+
+## Contributing
+
+${data.contributing}
+
+## Tests
+
+${data.tests}
+
+${renderLicenseSection(data.license)}
+
+## Questions
+
+For any questions, please contact me at [${data.email}](mailto:${data.email}).
+
+GitHub: [${data.github}](https://github.com/${data.github})
 `;
 }
 
