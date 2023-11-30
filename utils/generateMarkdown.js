@@ -1,9 +1,26 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  let color;
+
+  switch (license) {
+      case 'MIT':
+          color = 'yellow';
+          break;
+      case 'Apache_2.0':
+          color = 'blue';
+          break;
+      case 'Boost_1.0':
+          color = 'lightblue';
+          break;
+      case 'BSD_3--Clause':
+          color = 'orange';
+          break;
+      default:
+          color = 'lightgrey';
+  }
   if (license !== 'None') {
-    return `![License](https://img.shields.io/badge/License-${license}-blue.svg)`;
-}
+    return `![License](https://img.shields.io/badge/License-${license}-${color}.svg)`;}
 return '';
 }
 
